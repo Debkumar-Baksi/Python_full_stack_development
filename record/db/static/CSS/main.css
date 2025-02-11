@@ -1,27 +1,25 @@
 body {
-  background-color: lightblue;
+  background-color: rgb(119, 241, 241);
 }
-<style>
 
-		#logo{
-		}
+#logo {
 
-		body{
-			background-color: lightblue;
-		}
+}
 
-
-		#total-orders{
-			background-color: yellow;
-		}
+body{
+	background-color: rgb(101, 222, 222);
+}
 
 
-		#orders-delivered{
-			background-color: green;
-		}
+#total-orders{
+	background-color: rgb(255, 72, 0);
+}
 
-		#orders-pending{
-			background-color: aqua;
-		}
 
-	</style>
+#orders-delivered{
+	background-color: rgb(0, 41, 128);
+}
+
+#orders-pending{
+	background-color: rgb(64, 255, 0);
+}
