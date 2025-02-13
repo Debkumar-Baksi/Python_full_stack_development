@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+
 from .models import Product , Customer , Order , Tag
+from .forms import OrderForm
 
 # Create your views here.
 def home(request):
@@ -34,3 +36,14 @@ def customer(request,pk_test):
     order_count=orders.count()
     context={'customer':customer,'orders':orders,'order_count':order_count}
     return render(request,'accounts/customer.html', context)
+
+
+def createorder(request):
+    form=OrderForm()
+    if request.method=="POST":
+        form=OrderForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    context={'form':form}
+    return render(request,'accounts/order_form.html',context)
