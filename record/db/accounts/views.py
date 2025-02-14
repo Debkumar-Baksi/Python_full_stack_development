@@ -47,3 +47,18 @@ def createorder(request):
             return redirect('/')
     context={'form':form}
     return render(request,'accounts/order_form.html',context)
+
+def updateorder(request,pk):
+    order=Order.objects.get(id=pk) # return particular product id 
+    form=OrderForm(instance=order) # show prod in form page
+
+    if request.method=='POST':
+        form=OrderForm(request.POST,instance=order)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    context={'order':order,'form':form}
+    return render(request,'accounts/order_form.html',context)
+
+    
+
