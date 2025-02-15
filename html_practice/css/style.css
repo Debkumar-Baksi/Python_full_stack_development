@@ -50,9 +50,16 @@
         border-width: 5px;
         background-color: blue;
         font-size: 15pt;
-    }
+    }  
+}
 
+/* hover section */
+a:hover{
+    background-color: yellow;
+    font-size: 40pt;
+}
 
-
-    
+h1:hover{
+    background-color: pink;
+    font-size: 40pt;
 }
