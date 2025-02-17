@@ -1,5 +1,5 @@
-
-<body>
+{% extends 'base.html' %}
+{% block content %}
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -10,4 +10,5 @@
     <p>No polls are available.</p>
 {% endif %}
 
-</body>
+{% endblock %}
+
