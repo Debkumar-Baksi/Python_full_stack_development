@@ -1,0 +1,5 @@
+body{
+    background-color: blue url('CSS/images.jpg') no-repeat;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+}

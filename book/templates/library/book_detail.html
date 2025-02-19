@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Book Title:- <h1>{{ book.title }}</h1>
+<br>
+Book Author:<h3>{{ book.author }}</h3>
+<br>
+<h3>{{ book.publication_date }}</h3>
+<br>
+Book Isbn number: <h3>{{ book.isbn }}</h3>
+
+publisher :-
+{% for publisher in book.publisher.all %}
+*{{ publisher.name }}
+{% endfor %}
+
+{% endblock %}
