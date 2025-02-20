@@ -1,0 +1,9 @@
+body{
+    background-image: url("../images/images.jpg");  /* Adjusted relative path */
+    font-family: Arial, sans-serif;
+    background-size: cover;
+}
+.jumbotron{
+    padding: 30px;
+    align-items: center;
+}

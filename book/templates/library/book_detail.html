@@ -11,7 +11,7 @@ Book Isbn number: <h3>{{ book.isbn }}</h3>
 
 publisher :-
 {% for publisher in book.publisher.all %}
-*{{ publisher.name }}
+    {{ publisher.name }}
 {% endfor %}
 
 {% endblock %}

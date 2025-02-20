@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <form method = "POST">
+    {% csrf_token %}
+    <h1>Book Information</h1>
+    {{book_form|crispy}}
+        <br>
+        <h1>Author Information</h1>
+        {{author_form|crispy}}
+        <button class="submit">Submit</button>
+      
+  </form>
+</div>
+</div>
+
+
+{% endblock %}
